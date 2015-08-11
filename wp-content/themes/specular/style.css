@@ -2621,13 +2621,13 @@ footer .footer_social_icons li i {
 
 footer ul.sub-menu{
 
-	padding-left: 32px !important;
+  padding-left: 32px !important;
 
 }
 
 footer ul li.menu-item-has-children{
 
-	padding-bottom:10px;
+  padding-bottom:10px;
 }
 
 footer #wp-calendar{width:100%;}
@@ -3924,11 +3924,11 @@ footer .widget-title {
 
 aside select {
 
-	width:100%;
-	border-radius: 3px;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	-o-border-radius:3px;
+  width:100%;
+  border-radius: 3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -o-border-radius:3px;
 }
 
 aside #s {
@@ -4037,14 +4037,14 @@ aside .tagcloud a{
 }
 aside ul.sub-menu{
 
-	padding-left: 32px;
-	padding-top:10px;
+  padding-left: 32px;
+  padding-top:10px;
 
 }
 
 aside ul.sub-menu li:last-child, aside li.menu-item-has-children{
 
-	border-bottom: none;
+  border-bottom: none;
 }
 
 aside li.menu-item-has-children:after{content:"";}
