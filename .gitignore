@@ -1,8 +1,11 @@
 *.log
+*.DS_Store
 .htaccess
+.ftpquota
 sitemap.xml
 sitemap.xml.gz
 wp-config.php
+wp-admin/error_log
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
