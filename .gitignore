@@ -6,6 +6,9 @@ sitemap.xml
 sitemap.xml.gz
 wp-config.php
 wp-admin/error_log
+wp-content/updraft/*-old/*
+wp-content/*-old
+wp-content/updraft/log.*.txt
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
