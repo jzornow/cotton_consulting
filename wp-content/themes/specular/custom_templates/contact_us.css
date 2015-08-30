@@ -1,0 +1,40 @@
+.page_header_yes #content {
+    padding-top:24px;
+}
+.contact-info-container {
+    width:30%;
+}
+
+.contact-form-container {
+    width:60%;
+    margin-left: 9%;
+}
+
+.contact-form-container h2 {
+  margin-bottom: 1em;
+}
+
+.contact-page-container {
+    float: left;
+}
+
+.contact-info-list li {
+    list-style-type:none;
+    margin-bottom: 18px;
+}
+
+.contact-info-list .phone {
+  /*list-style-image: url("../wp-content/themes/specular/img/phone.png");*/
+}
+
+.contact-info-list .address {
+  /*list-style-image: url("../wp-content/themes/specular/img/maps.png");*/
+}
+
+@media screen and (max-width: 900px) {
+  .contact-page-container {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2em auto;
+  }
+}
