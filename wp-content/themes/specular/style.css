@@ -64,6 +64,15 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
     left: 40px;
     margin: 40px auto auto 40px;
   }
+
+ .mobile_small_menu.open { 
+    /*float: right;*/
+    color:white;
+    position:absolute;
+    left: 40px;
+    margin: 40px auto auto 40px;
+  }
+ 
 }
 
 
