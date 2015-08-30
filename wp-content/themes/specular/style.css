@@ -17,12 +17,37 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
 
 /*-----------------------------------------------------------------------------------*/
 /* Custom */
+
+  header .header-container.container {
+    margin-right: 0;
+    margin-left:0;
+    width:100% !important;
+    max-width:100% !important ;
+  }
+
+  .mobile_small_menu { 
+    /*float: right;*/
+    position:absolute;
+    right: 40px;
+    margin: 40px 40px auto 0;
+  }
+
+  .row-fluid .span12 { 
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+#navigation.nav_top.pull-right {
+  padding-right:30px;
+}  
+
+
 @media screen and (max-width: 480px) {
   header {
     background-color: #0000FE !important;
   }
 
-  header .container {
+  header .header-container {
     margin-right: 0;
   }
 
@@ -31,6 +56,13 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
     height: 100px;
     margin-top:0;
     top:0;
+  }
+
+  .mobile_small_menu { 
+    /*float: right;*/
+    position:absolute;
+    left: 40px;
+    margin: 40px auto auto 40px;
   }
 }
 
@@ -817,9 +849,9 @@ nav .menu > li:last-child{padding-right:0; margin-right:0;}
 
 .mobile_small_menu{
   display:none; 
-  position: absolute;
+  /*position: absolute;
   top: 50%;
-  margin-top: -10px;
+  margin-top: -10px;*/
 }
 .mobile_small_menu.open:before{
   content: "\f0c9";
@@ -1034,16 +1066,16 @@ header#header .row-fluid .span12{
 /* Header 1 */
 
 #logo { 
-  position: absolute;
-  left: 0;
-  margin-left:-75px;
+/*  position: absolute;
+  left: 0;*/
+/*  margin-left:-75px;*/
 }
 
 @media (max-width: 979px) {
   #logo {
-    left: 10%;
+/*    left: 10%;
     position: relative;
-  }  
+*/  }  
 }
 
 
