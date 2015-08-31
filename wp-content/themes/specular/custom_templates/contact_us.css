@@ -53,4 +53,9 @@
     width: 100%;
     margin: 0 auto 2em auto;
   }
+
+  .contact-info-list { 
+    padding-left: 12px;
+  }
+
 }
