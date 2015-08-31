@@ -6,8 +6,8 @@
 }
 
 .contact-form-container {
-    width:60%;
-    margin-left: 9%;
+    width:50%;
+    margin-left: 15%;
 }
 
 .contact-form-container h2 {
@@ -20,18 +20,34 @@
 
 .contact-info-list li {
     list-style-type:none;
+    background-repeat:no-repeat;
     margin-bottom: 18px;
+    padding-left: 28px;
+    background-position: 0px 5px;
 }
 
 .contact-info-list .phone {
-  /*list-style-image: url("../wp-content/themes/specular/img/phone.png");*/
+  background-image: url("../wp-content/themes/specular/img/custom_photos/icons/phone.png");
+  background-size:18px 18px;
 }
 
 .contact-info-list .address {
-  /*list-style-image: url("../wp-content/themes/specular/img/maps.png");*/
+  background-image: url("../wp-content/themes/specular/img/custom_photos/icons/location.png");
+  background-size: 12px 18px;
 }
 
-@media screen and (max-width: 900px) {
+.contact-info-list .fax {
+  background-image: url("../wp-content/themes/specular/img/custom_photos/icons/fax.png");
+  background-size:18px 18px;
+}
+
+.contact-info-list .email {
+  background-image: url("../wp-content/themes/specular/img/custom_photos/icons/envelope.png");
+  background-size: 18px 12px;
+  background-position: 0px 7px;
+}
+
+@media screen and (max-width: 978px) {
   .contact-page-container {
     display: block;
     width: 100%;
