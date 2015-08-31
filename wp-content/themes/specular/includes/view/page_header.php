@@ -64,24 +64,6 @@
                     <?php if($cl_redata['subtitle_bool']): ?>
                     </div>
                     <?php endif; ?>
-
-                    <?php if($cl_redata['page_header_style'] == 'normal'): ?>
-                    <div class="breadcrumbss">
-                        
-                        <ul class="page_parents pull-right">
-                            <li>You are here: </li>
-                            <li class="home"><a href="<?php echo esc_url(home_url()) ?>">Home</a></li>
-                            
-                            <?php for($i = count($page_parents) - 1; $i >= 0; $i-- ){ ?>
-
-                            <li><a href="<?php echo esc_url(get_permalink($page_parents[$i])) ?>"><?php echo esc_html(get_the_title($page_parents[$i])) ?> </a></li>
-
-                            <?php }  ?>
-                            <li class="active"><a href="<?php echo esc_url(get_permalink()) ?>"><?php echo esc_html($title) ?></a></li>
-
-                        </ul>
-                    </div>
-                    <?php endif; ?>
                 </div>
             
     </div> 
