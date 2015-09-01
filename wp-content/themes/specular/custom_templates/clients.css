@@ -1,0 +1,9 @@
+/* Need to add .clients_container to some parent of tiles */
+
+.clients_container a { 
+    display: none !important;
+}
+
+.clients_container .vc_gitem-is-link {
+    cursor: default !important;
+}
