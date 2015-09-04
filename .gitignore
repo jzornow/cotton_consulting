@@ -6,6 +6,8 @@ sitemap.xml
 sitemap.xml.gz
 wp-config.php
 wp-admin/error_log
+wp-content/themes/specular/error_log/*
+error_log
 wp-content/updraft/*-old/*
 wp-content/*-old
 wp-content/updraft/log.*.txt
