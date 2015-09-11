@@ -267,6 +267,7 @@
             <!-- End Responsive Menu -->
             <?php endif; ?>
             <?php endif; ?>
+            <div class="header-border"></div>
         </header>
 
     </div>
