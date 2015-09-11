@@ -41,6 +41,10 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
   padding-right:30px;
 }  
 
+html {
+  background-color:#222222;
+}
+
 
 @media screen and (max-width: 480px) {
   header {
