@@ -19,7 +19,7 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
 /* Custom */
 
 html {
-  background-color:#222222;
+  background-color:#aaa;
 }
 
 body {
@@ -45,6 +45,25 @@ body {
 .header_page .container {
     margin-top: 1em;
   /*background-color: #ddd;*/
+}
+
+.copyright_text {
+
+}
+
+.footer-copyright{
+  float:left;
+  font-size:2em;
+  margin-top:1em;
+}
+
+.footer-logo {
+  float:right;
+  height: 80px;
+  width: 100px;
+  background-image:url("http://localhost:8888/wp-content/themes/specular/img/custom_photos/footer-logo.png");
+  background-size:100%;
+  background-repeat:no-repeat;
 }
 
 
