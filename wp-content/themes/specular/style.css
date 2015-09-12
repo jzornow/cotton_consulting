@@ -22,6 +22,9 @@ html {
   background-color:#222222;
 }
 
+body {
+  background-color: white;
+}
 .header-border {
   background-image:url("http://localhost:8888/wp-content/themes/specular/img/custom_photos/nav-border.png");
   background-repeat:no-repeat;
@@ -33,6 +36,17 @@ html {
   height: auto !important;
   top:75%;
 }
+
+.header_page {
+  background-color: #fdfdfd !important;
+  border-bottom:2px solid #ddd;
+}
+
+.header_page .container {
+    margin-top: 1em;
+  /*background-color: #ddd;*/
+}
+
 
 /*-----------------------------------------------------------------------------------
 
