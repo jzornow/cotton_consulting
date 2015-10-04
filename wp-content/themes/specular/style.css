@@ -15,64 +15,6 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
 @import url("css/shortcodes.css");
 @import url('css/animate.min.css');
 
-/*-----------------------------------------------------------------------------------*/
-/* Custom */
-
-html {
-  background-color:#aaa;
-}
-
-body {
-  background-color: white;
-}
-.header-border {
-  background-image:url("img/custom_photos/nav-border.png");
-  background-repeat:no-repeat;
-  background-size: 100% 5px;
-  height:5px;
-}
-
-#logo img { 
-  height: auto !important;
-  top:75%;
-}
-
-.header_page {
-  background-color: #fdfdfd !important;
-  border-bottom:2px solid #ddd;
-}
-
-.header_page .container {
-    margin-top: 1em;
-  /*background-color: #ddd;*/
-}
-
-.copyright_text {
-
-}
-
-.footer-copyright{
-  float:left;
-  font-size:2em;
-  margin-top:1em;
-}
-
-.footer-logo {
-  float:right;
-  height: 80px;
-  width: 100px;
-  background-image:url("img/custom_photos/footer-logo.png");
-  background-size:100%;
-  background-repeat:no-repeat;
-}
-
-@media screen and (max-width: 700px) {
-  .footer-logo{
-    margin-top:2em;
-  }
-}
-
-
 /*-----------------------------------------------------------------------------------
 
 [Table of contents]
@@ -599,7 +541,7 @@ header#header {
 }
 #logo img {
   max-width:none;
-  top:75%;
+  top:50%;
   position:relative;
 }
 
