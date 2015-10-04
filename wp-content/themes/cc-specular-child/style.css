@@ -33,6 +33,8 @@ header {
   border-bottom:6px;
   border-top: 0;
   border-image: url("img/custom_photos/nav-border.png") 10 stretch;
+  -webkit-border-image: url("img/custom_photos/nav-border.png") 10 stretch;
+  -o-border-image: url("img/custom_photos/nav-border.png") 10 stretch;
 }
 
 #logo img { 
