@@ -14,6 +14,7 @@
 $output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
+$extra_class = '';
 
 		global $cl_redata;
 		

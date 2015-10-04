@@ -71,6 +71,32 @@ extract( $atts );
 
                         $output .= '</div>';
                     }
+                     else if( (has_post_thumbnail() && get_post_format() == 'video') || get_post_format() === false ){
+                        
+                        $tags = get_the_tags();
+                        $tag_out = ''; $num=count($tags); $i=0; if($tags) foreach($tags as $tag): if(++$i === $num){$tag_out .= $tag->name;} else {$tag_out .= $tag->name.', ';}  endforeach;
+               
+                        $output .= '<div class="'.( ($carousel == 'yes')?'swioer-slide':'' ).' blog-item '.esc_attr($style).' '.(($dynamic_from_where == 'one_post')?'single':'').'">'; 
+                            if( has_post_thumbnail() )
+                                $output .= '<img src="'.esc_url(codeless_image_by_id(get_post_thumbnail_id(), 'port2', 'url')).'" alt="">';
+                            $output .= '<div class="content">';
+                                $output .= '<h4><a href="'.esc_attr(get_permalink()).'">'.esc_html(get_the_title()).'</a></h4>';
+                                $output .= '<ul class="info">';
+                                    $output .= '<li><i class="linecon-icon-user"></i>'.__('Posted by', 'codeless').' '.get_the_author().'</li>'; 
+                                    $output .= '<li><i class="linecon-icon-calendar"></i>'.__('On', 'codeless').' '.get_the_date().'</li>';   
+                                $output .= '</ul>';
+                                $output .= '<p>'.codeless_text_limit(get_the_excerpt(), $text_limit).'</p>';
+                                $output .= '<div class="after">';
+                                    $output .= '<ul class="info">';
+                                         
+                                        $output .= '<li><i class="linecon-icon-tag"></i>'.$tag_out.'</li>';                        
+                                    $output .= '</ul>';
+                                    $output .= '<div class="post-like">'.getPostLikeLink( get_the_ID() ).'</div>';
+                                $output .= '</div>';  
+                            $output .= '</div>'; 
+
+                        $output .= '</div>';
+                    }
                     
 
             endwhile;

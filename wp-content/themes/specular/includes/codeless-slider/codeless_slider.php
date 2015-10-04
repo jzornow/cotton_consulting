@@ -51,6 +51,7 @@ class CodelessSlider {
 	}
 
 	function closeSlider(){
+		global $output;
 					$output .= '</div>';
 				$output .= '</div>';
 			$output .= '</div>';
@@ -181,8 +182,8 @@ class CodelessSlider {
 	function createImageStyle(){
 		global $cl_redata;
 		
-		$image_style = ' width: '. esc_attr($cl_redata['slide_image_dimension']['width']).'; ';
-		$image_style .= ' height: '. esc_attr($cl_redata['slide_image_dimension']['height']).'; ';
+		$image_style = ' width: '. esc_attr($cl_redata['slide_image_dimension']['Width']).'; ';
+		$image_style .= ' height: '. esc_attr($cl_redata['slide_image_dimension']['Height']).'; ';
 
 		return $image_style;
 	}

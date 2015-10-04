@@ -122,10 +122,7 @@
                     $this->post_type = get_post_type( $this->post_id );
                 }
 
-                // Added From Codeless
-                if( isset( $_GET['post_type'] ) && $_GET['post_type'] == 'product' && class_exists('Woocommerce'))
-                    $this->post_id = get_option('woocommerce_shop_page_id');
-                
+
                 foreach ( $this->boxes as $bk => $box ) {
                     // If the post ids for this box are set, we're limiting to the current post id
                     if ( isset( $box['post_ids'] ) && ! empty( $box['post_ids'] ) ) {

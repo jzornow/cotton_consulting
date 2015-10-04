@@ -258,6 +258,7 @@ $faq_cat['Retrive from all categories'] = 0;
 $faq_cat_term = get_terms('faq_entries');
 
 foreach ($faq_cat_term as $term) {
+  if(is_object($term))
   $faq_cat[$term->name] = $term->term_id;
 }
 
@@ -4089,7 +4090,7 @@ vc_add_param("vc_column_text", array (
 
 vc_remove_param("vc_tabs", "interval"); 
 
-vc_remove_param("vc_column_text", "css_animation");
+//vc_remove_param("vc_column_text", "css_animation");
 
 vc_remove_param("vc_accordion", "collapsible");
 
@@ -4315,7 +4316,7 @@ vc_map( array (
 
       'heading' => 'Animation',
 
-      'admin_label' => false,
+      'admin_label' => true,
 
       'param_name' => 'animation',
 
@@ -4325,13 +4326,13 @@ vc_map( array (
 
       array (
 
-        'Show From Left' => 'left',
+        'Show From Left' => 'Left',
 
-        'Show From Right' => 'right',
+        'Show From Right' => 'Right',
 
-        'Show from Top' => 'top',
+        'Show from Top' => 'Up',
 
-        'Show From Bottom' => 'bottom',
+        'Show From Bottom' => 'Down',
 
         'None' => 'none',
 

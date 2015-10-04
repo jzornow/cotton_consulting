@@ -1,7 +1,7 @@
 /*
 Theme Name: Specular
 Description: Specular is a multi-purpose wordpress theme. Codeless Themes are simple and powerful. Create awesome portfolio, corporate, business, restaurant and much much more pages with this theme.
-Version: 1.3.6
+Version: 1.4.3
 Author: Codeless
 Author URI: http://www.codeless.co
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
@@ -14,6 +14,8 @@ Tags: business, clean, corporate, design, drag-drop, localization, portfolio, sh
 @import url("css/flexslider.css");
 @import url("css/shortcodes.css");
 @import url('css/animate.min.css');
+
+
 
 /*-----------------------------------------------------------------------------------
 
@@ -1013,25 +1015,9 @@ header#header .row-fluid .span12{
 
 /* Header 1 */
 
-#logo { 
-  position: absolute;
-  left: 0;
-  margin-left:-75px;
-}
-
-@media (max-width: 979px) {
-  #logo {
-    left: 10%;
-    position: relative;
-  }  
-}
-
-
 .header_1.page_header_centered .header_wrapper, .header_1.fullwidth_slider_page  .header_wrapper{
   position:absolute;
 }
-
-/* .fullwidth_header .header_wrapper header { padding-left: 0; } */
 .background--dark nav .menu > li > a:hover, .background--dark header#header .header_tools .vert_mid > a:hover, .background--dark .slicknav_btn:hover:after, .background--dark header#header .header_tools .vert_mid .cart .cart_icon:hover{
   color:rgba(255,255,255,0.8) !important;
 } 
@@ -1486,7 +1472,7 @@ header#header .row-fluid .span12{
   -moz-box-sizing:border-box;
 
 }
-.header_8 nav .menu > li > ul.sub-menu, .header_8 nav .menu > li > ul.sub-menu ul{top:105%;left:0 !important;}
+.header_8 nav .menu > li > ul.sub-menu, .header_8 nav .menu > li > ul.sub-menu ul{top:105%;left:0 }
 .header_8 nav .menu > li > ul.sub-menu ul {
 top: -10px;
 }
@@ -2619,13 +2605,13 @@ footer .footer_social_icons li i {
 
 footer ul.sub-menu{
 
-  padding-left: 32px !important;
+	padding-left: 32px !important;
 
 }
 
 footer ul li.menu-item-has-children{
 
-  padding-bottom:10px;
+	padding-bottom:10px;
 }
 
 footer #wp-calendar{width:100%;}
@@ -3922,11 +3908,11 @@ footer .widget-title {
 
 aside select {
 
-  width:100%;
-  border-radius: 3px;
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  -o-border-radius:3px;
+	width:100%;
+	border-radius: 3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
 }
 
 aside #s {
@@ -4035,14 +4021,14 @@ aside .tagcloud a{
 }
 aside ul.sub-menu{
 
-  padding-left: 32px;
-  padding-top:10px;
+	padding-left: 32px;
+	padding-top:10px;
 
 }
 
 aside ul.sub-menu li:last-child, aside li.menu-item-has-children{
 
-  border-bottom: none;
+	border-bottom: none;
 }
 
 aside li.menu-item-has-children:after{content:"";}
@@ -5976,6 +5962,7 @@ height: 40px !important;
   margin-bottom:35px;
   position:relative;
   min-height:20px !important;
+  height: auto;
 }
 
 #faq-filter ul {
@@ -8701,3 +8688,8 @@ width: 100%;
 }
 
 @media (max-width: 767px){.side-nav { width: 250px !important;}}
+
+.header_8 nav .menu > li > ul.sub-menu ul {
+
+  left: 220px;
+}

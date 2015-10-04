@@ -6,7 +6,7 @@ class CodelessShortcodeWidget extends Wp_Widget{
 
         $options = array('classname' => 'widget_shortcode', 'description' => 'Add a text widget to show shortcodes' );
 
-		$this->WP_Widget( 'widget_shortcode', THEMENAME.' Widget Shortcode', $options );
+		parent::__construct( 'widget_shortcode', THEMENAME.' Widget Shortcode', $options );
 
     }
 

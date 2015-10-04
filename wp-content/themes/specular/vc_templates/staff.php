@@ -10,7 +10,7 @@
 $output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
-
+global $cl_redata;
 
         $output = '';
         if(isset($staff)){

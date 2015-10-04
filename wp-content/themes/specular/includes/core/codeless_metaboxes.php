@@ -55,7 +55,7 @@ if ( !function_exists( "cl_add_single_portfolio_metaboxes" ) ):
                     'title' => __( 'Content Position', 'codeless' ),
                     'desc' => 'Select the position for the content',
                     'type' => 'select',
-                    'options' => array('left' => 'Left', 'right' => 'Right', 'bottom' => 'Bottom'),
+                    'options' => array('left' => 'Left', 'right' => 'Right', 'bottom' => 'Bottom', 'top' => 'Top'),
                     'default' => 'right',
                     'required' => array('single_portfolio_style','=', 'container')
                 ),

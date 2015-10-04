@@ -8,7 +8,7 @@ class CodelessAdsWidget extends WP_Widget{
 
         $options = array('classname' => 'widget_ads', 'description' => 'Add an ad' );
 
-		$this->WP_Widget( 'widget_ads', THEMENAME.' Widget Ads', $options );
+		parent::__construct( 'widget_ads', THEMENAME.' Widget Ads', $options );
 
     }
 

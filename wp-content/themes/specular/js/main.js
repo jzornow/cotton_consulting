@@ -381,7 +381,11 @@ function codelessNavigation(){
 		}
 	});
 
-	$('nav .menu li .sub-menu').each(function(){
+	$('.header_1 nav .menu li .sub-menu').each(function(){
+		$(this).parent().first().addClass('hasSubMenu');
+	});
+
+	$('.header_8 nav .menu li .sub-menu').each(function(){
 		$(this).parent().first().addClass('hasSubMenu');
 	});
 
@@ -1107,7 +1111,8 @@ $.fn.codelessSliderInit = function () {
 	$('.codeless_slider_wrapper', parent).css('min-height', height+'px');
 	parent.css('min-height', height+'px');
 
-
+/* ----uncomment this if you want a min height for slider on responsive */
+/*
 	if($(window).width() < 767){
 		var window_width = $(window).width();
 		var new_height = (window_width * height) / 767;
@@ -1117,6 +1122,7 @@ $.fn.codelessSliderInit = function () {
 		parent.height(new_height+'px');
 		slider.height(new_height+'px');
 	}
+	*/
 
 	$('.codeless_slider').imagesLoaded(function(){
 		$loading.css('display', 'none');

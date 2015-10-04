@@ -8,7 +8,7 @@ class CodelessMostPopularWidget extends WP_Widget{
 
         $options = array('classname' => 'widget_most_popular', 'description' => 'Add a widget to show the most popular posts' );
 
-		$this->WP_Widget( 'widget_most_popular', THEMENAME.' Widget Popular Posts', $options );
+		parent::__construct( 'widget_most_popular', THEMENAME.' Widget Popular Posts', $options );
 
     }
 

@@ -32,9 +32,9 @@ extract( $atts );
 	                }
 	            }
                 if($link!="#" && $link!="")
-                $output .= '<a href="'.$link.'" target="_blank"><img src="'.esc_url($image).'" alt="" class="type_image media_animation animation_'.esc_attr($animation).' alignment_'.esc_attr($alignment).'" '.$width_style.' /></a>';
+                $output .= '<a href="'.$link.'" target="_blank"><img src="'.esc_url($image).'" alt="" class="type_image animated fadeIn'.esc_attr($animation).' alignment_'.esc_attr($alignment).'" '.$width_style.' /></a>';
                 else
-                $output .= '<img src="'.esc_url($image).'" alt="" class="type_image media_animation animation_'.esc_attr($animation).' alignment_'.esc_attr($alignment).'" '.$width_style.' />';
+                $output .= '<img src="'.esc_url($image).'" alt="" class="type_image animated fadeIn'.esc_attr($animation).' alignment_'.esc_attr($alignment).'" '.$width_style.' />';
                 
             }
         }

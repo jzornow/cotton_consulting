@@ -144,7 +144,7 @@
             }
 
             public function add_submenu() {
-                add_submenu_page(
+                add_theme_page(
                     $this->parent->args['page_slug'],
                     __( 'Import / Export', 'redux-framework' ),
                     __( 'Import / Export', 'redux-framework' ),

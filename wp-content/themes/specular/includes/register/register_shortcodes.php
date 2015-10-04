@@ -50,6 +50,7 @@ if(!function_exists('codeless_sc_blockquote')){
     function codeless_sc_blockquote($atts, $content=null, $shortcodename =""){
 
         extract(shortcode_atts(array('source' => '', 'background' => ''), $atts));
+        $bg ='';
 
         if(!empty($background)){
 

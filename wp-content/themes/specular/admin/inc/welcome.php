@@ -36,7 +36,7 @@
         public function admin_menus() {
 
             // About Page
-            add_dashboard_page(
+            add_theme_page(
                 __( 'Welcome to Redux Framework', 'redux-framework' ), __( 'Welcome to Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-about', array(
                     $this,
                     'about_screen'
@@ -44,7 +44,7 @@
             );
 
             // Changelog Page
-            add_dashboard_page(
+            add_theme_page(
                 __( 'Redux Framework Changelog', 'redux-framework' ), __( 'Redux Framework Changelog', 'redux-framework' ), $this->minimum_capability, 'redux-changelog', array(
                     $this,
                     'changelog_screen'
@@ -52,7 +52,7 @@
             );
 
             // Getting Started Page
-            add_dashboard_page(
+            add_theme_page(
                 __( 'Getting started with Redux Framework', 'redux-framework' ), __( 'Getting started with Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-getting-started', array(
                     $this,
                     'getting_started_screen'
@@ -60,7 +60,7 @@
             );
 
             // Credits Page
-            add_dashboard_page(
+            add_theme_page(
                 __( 'The people that develop Redux Framework', 'redux-framework' ), __( 'The people that develop Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-credits', array(
                     $this,
                     'credits_screen'

@@ -7,7 +7,7 @@ class CodelessTwitter extends WP_Widget{
 
         $options = array('classname' => 'widget_twitter', 'description' => 'A widget to display latest entries from twitter' );
 
-		$this->WP_Widget( 'widget_twitter', THEMENAME.' Twitter Widget', $options );
+		parent::__construct( 'widget_twitter', THEMENAME.' Twitter Widget', $options );
 
 		require_once( 'class-wp-twitter-api.php' ); 
     }

@@ -8,7 +8,7 @@ class CodelessFlickrWidget extends WP_Widget{
 
         $options = array('classname' => 'widget_flickr', 'description' => 'Add a flickr list' );
 
-		$this->WP_Widget( 'widget_flickr', THEMENAME.' Widget Flickr', $options );
+		parent::__construct( 'widget_flickr', THEMENAME.' Widget Flickr', $options );
 
     }
 

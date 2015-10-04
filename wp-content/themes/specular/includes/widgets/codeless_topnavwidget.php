@@ -8,7 +8,7 @@ class CodelessTopNavWidget extends WP_Widget{
 
         $options = array('classname' => 'widget_topnav', 'description' => 'A widget that can be used only for the top navigation widgetized area' );
 
-		$this->WP_Widget( 'widget_topnav', THEMENAME.' Widget Top Navigation', $options );
+		parent::__construct( 'widget_topnav', THEMENAME.' Widget Top Navigation', $options );
 
     }
 

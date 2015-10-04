@@ -71,7 +71,7 @@
             }
 
             public function add_submenu() {
-                add_submenu_page(
+                add_theme_page(
                     $this->parent->args['page_slug'],
                     __( 'Options Object', 'redux-framework' ),
                     __( 'Options Object', 'redux-framework' ),

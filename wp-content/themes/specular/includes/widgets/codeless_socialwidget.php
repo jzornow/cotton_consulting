@@ -7,7 +7,7 @@ class CodelessSocialWidget extends WP_Widget{
 
         $options = array('classname' => 'social_widget', 'description' => 'Add a social widget' );
 
-        $this->WP_Widget( 'social_widget', THEMENAME.' Social Widget', $options );
+        parent::__construct( 'social_widget', THEMENAME.' Social Widget', $options );
 
     }
 
@@ -56,7 +56,7 @@ class CodelessSocialWidget extends WP_Widget{
             if( !empty($cl_redata['email']) )
                 echo '<li class="email"><a href="'.esc_url($cl_redata['email']).'"><i class="icon-envelope"></i></a></li>';
             if( !empty($cl_redata['instagram']) )
-                echo '<li class="email"><a href="'.esc_url($cl_redata['instagram']).'"><i class="icon-instagram"></i></a></li>';
+                echo '<li class="email"><a href="mailto:'.esc_url($cl_redata['instagram']).'"><i class="icon-instagram"></i></a></li>';
             if( !empty($cl_redata['vimeo']) )
                 echo '<li class="vimeo"><a href="'.esc_url($cl_redata['vimeo']).'"><i class="moon-vimeo"></i></a></li>';
             

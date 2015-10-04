@@ -59,7 +59,7 @@
 <body  <?php body_class(); ?>>
 
 <?php if($cl_redata['show_search']): ?>
-    <div class="search_bar"><div class="container header-container"><?php get_search_form() ?></div></div>
+    <div class="search_bar"><div class="container"><?php get_search_form() ?></div></div>
 <?php endif; ?>
 
 <?php if($cl_redata['extra_navigation']): ?>
@@ -82,7 +82,7 @@
     <?php if($cl_redata['top_navigation']): ?>
     <div class="top_nav">
         
-        <div class="container header-container">
+        <div class="container">
             <div class="row-fluid">
                 <div class="span6">
                     <div class="pull-left">
@@ -122,12 +122,16 @@
     <div class="header_6_wrapper">
      
     <?php endif; ?> 
+<?php if($cl_redata['header_transparency'])
+    $transparent='transparent';
+else $transparent='';
+?>
 
     <!-- Header BEGIN -->
-    <div  class="header_wrapper <?php echo esc_attr($header_class) ?> <?php echo esc_attr($bgCheck) ?> <?php if($header_class == 'header_7') echo 'pos--'.esc_attr($cl_redata['header_7_position']) ?>">
-        <header id="header" class="">
+    <div  class="header_wrapper <?php echo $transparent;?> <?php echo esc_attr($header_class) ?> <?php echo esc_attr($bgCheck) ?> <?php if($header_class == 'header_7') echo 'pos--'.esc_attr($cl_redata['header_7_position']) ?>">
+        <header id="header" class=" <?php echo $transparent;?>">
             <?php if(!$cl_redata['header_container_full']): ?>
-            <div class="container header-container">
+            <div class="container">
             <?php endif; ?>
         	   <div class="row-fluid">
                     <div class="span12">
@@ -267,13 +271,12 @@
             <!-- End Responsive Menu -->
             <?php endif; ?>
             <?php endif; ?>
-            <div class="header-border"></div>
         </header>
 
     </div>
     <?php if($header_class == 'header_6' || $header_class == 'header_10' || $header_class == 'header_12'): ?> 
     <div class="full_nav_menu">  
-        <div class="container header-container">
+        <div class="container">
             <div id="navigation" class="nav_top pull-right  <?php echo esc_attr($css_class) ?>">
                 <nav>
                     <?php 

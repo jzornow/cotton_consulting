@@ -1,96 +1,95 @@
 <?php
-
 if ( ! isset( $content_width ) ) $content_width = 940;
 
 /* --------------------- Load Core Functions ------------------------- */
-require_once( 'includes/core/codeless_config.php' );
-require_once( 'includes/core/core-functions.php' );
+require_once( get_template_directory().'/includes/core/codeless_config.php' );
+require_once( get_template_directory().'/includes/core/core-functions.php' );
 /* --------------------- End Load Core ------------------------------ */
 
 /* --------------------- Load MetaBoxes ----------------------------------- */
-require_once 'includes/codeless-slider/codeless_slider_options.php';
-require_once 'includes/core/codeless_metaboxes.php';
+require_once get_template_directory().'/includes/codeless-slider/codeless_slider_options.php';
+require_once get_template_directory().'/includes/core/codeless_metaboxes.php';
 /* --------------------- End Load Metaboxes ------------------------------ */
 
 
 
-require_once 'functions-specular.php';
-require_once 'includes/core/codeless_routing.php';
+require_once get_template_directory().'/functions-specular.php';
+require_once get_template_directory().'/includes/core/codeless_routing.php';
 
 /* -------------------- Load Codeless Import/Export ------------------ */
 add_filter( "redux/cl_redata/field/class/codeless_import", "codeless_import_export_load" );
 function codeless_import_export_load($field) {
-    return dirname(__FILE__).'/admin/inc/fields/codeless_import/codeless_import.php'; 
+    return get_template_directory().'/admin/inc/fields/codeless_import/codeless_import.php'; 
 }
 
 /* -------------------- End Load Codeless Import/Export -------------- */
 
 if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/admin/framework.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/admin/framework.php' );
+    require_once( get_template_directory().'/admin/framework.php' );
 }
 
 
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/core/codeless_options.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/core/codeless_options.php' );
+if ( !isset( $redux_demo ) && file_exists( get_template_directory().'/includes/core/codeless_options.php' ) ) {
+    require_once( get_template_directory().'/includes/core/codeless_options.php' );
 }
 
-require_once( dirname(__FILE__).'/admin/inc/fields/codeless_import/import_export.php');
+require_once( get_template_directory().'/admin/inc/fields/codeless_import/import_export.php');
 
 
 
 /* --------------------- Custom Post Types Load ---------------------- */
-require_once( 'includes/types/codeless_portfolio_type.php' );
-require_once( 'includes/types/codeless_staff_type.php' );
-require_once( 'includes/types/codeless_testimonial_type.php' );
-require_once( 'includes/types/codeless_faq_type.php' );
+require_once( get_template_directory().'/includes/types/codeless_portfolio_type.php' );
+require_once( get_template_directory().'/includes/types/codeless_staff_type.php' );
+require_once( get_template_directory().'/includes/types/codeless_testimonial_type.php' );
+require_once( get_template_directory().'/includes/types/codeless_faq_type.php' );
 /* --------------------- End Custom Post Types Load ------------------ */
 
 
 /* --------------------- Register ------------------------------------ */
-require_once 'includes/register/register_shortcodes.php';
-require_once 'includes/register/register_sidebars.php';
+require_once get_template_directory().'/includes/register/register_shortcodes.php';
+require_once get_template_directory().'/includes/register/register_sidebars.php';
 /* --------------------- End Register -------------------------------- */
 
 
 /* --------------------- Required Plugins Activation ----------------- */
-require_once( 'includes/core/codeless_required_plugins.php' );
+require_once( get_template_directory().'/includes/core/codeless_required_plugins.php' );
 /* --------------------- Required Plugins Activation ----------------- */
 
 
 /* --------------------- Codeless Slider Load ------------------------ */
-require_once( 'includes/core/codeless_slideshow.php' );
-require_once( 'includes/codeless-slider/codeless_slider_type.php' );
-require_once( 'includes/codeless-slider/codeless_slider.php' );
+require_once( get_template_directory().'/includes/core/codeless_slideshow.php' );
+require_once( get_template_directory().'/includes/codeless-slider/codeless_slider_type.php' );
+require_once( get_template_directory().'/includes/codeless-slider/codeless_slider.php' );
 /* --------------------- End Codeless Slider Load -------------------- */
 
 
 /* --------------------- Post Like Load ------------------------------ */
-require_once 'includes/post-like.php';
+require_once get_template_directory().'/includes/post-like.php';
 /* --------------------- End Post LIke Load -------------------------- */
 
 
 /* --------------------- Load Widgets -------------------------------- */
-require_once 'includes/widgets/codeless_flickr.php';
-require_once 'includes/widgets/codeless_mostpopular.php';
-require_once 'includes/widgets/codeless_shortcodewidget.php';
-require_once 'includes/widgets/codeless_socialwidget.php';
-require_once 'includes/widgets/codeless_topnavwidget.php';
-require_once 'includes/widgets/codeless_twitter.php';
-require_once 'includes/widgets/codeless_ads.php';
+require_once get_template_directory().'/includes/widgets/codeless_flickr.php';
+require_once get_template_directory().'/includes/widgets/codeless_mostpopular.php';
+require_once get_template_directory().'/includes/widgets/codeless_shortcodewidget.php';
+require_once get_template_directory().'/includes/widgets/codeless_socialwidget.php';
+require_once get_template_directory().'/includes/widgets/codeless_topnavwidget.php';
+require_once get_template_directory().'/includes/widgets/codeless_twitter.php';
+require_once get_template_directory().'/includes/widgets/codeless_ads.php';
 /* --------------------- End Load Widgets ---------------------------- */
 
 
 /* -------------------- Load Shortcodes Generator -------------------- */
-require_once( 'includes/core/shortcodes/shortcodes.php' );
+require_once( get_template_directory().'/includes/core/shortcodes/shortcodes.php' );
 /* -------------------- Load Shortcodes Generator -------------------- */
 
 /* -------------------- Load Custom Menu ----------------------------- */
-require_once( 'includes/core/codeless_megamenu.php' );
+require_once( get_template_directory().'/includes/core/codeless_megamenu.php' );
 /* -------------------- Load Custom Menu ----------------------------- */
 
 /* -------------------- Load Woocommerce Functions ----------------------------- */
 if(class_exists( 'woocommerce' ))
-    require_once( 'functions-woocommerce.php' );
+    require_once( get_template_directory().'/functions-woocommerce.php' );
 /* -------------------- Load Custom Menu ----------------------------- */
 
 /* -------------------- Setup Theme ---------------------------------- */
@@ -277,7 +276,7 @@ function codeless_register_global_scripts(){
 
 /* -------------------- WP TITLE Filter ------------------------------ */
 
-function themeple_wp_title_filter( $title, $sep ) {
+function codeless_wp_title_filter( $title, $sep ) {
     if ( is_feed() ) {
         return $title;
     }
@@ -301,7 +300,7 @@ function themeple_wp_title_filter( $title, $sep ) {
     return $title;
 }
 
-add_filter( 'wp_title', 'themeple_wp_title_filter', 10, 2 );
+add_filter( 'wp_title', 'codeless_wp_title_filter', 10, 2 );
 
 /* -------------------- End WP Title Filter -------------------------- */
 
