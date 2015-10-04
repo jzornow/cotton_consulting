@@ -1,0 +1,72 @@
+/*
+ Theme Name:   Cotton Consulting Specular Child
+ Theme URI:    http://cottonconsultingny.com/cc-specular-child/
+ Description:  Specular Child Theme for Cotton Consulting LLC
+ Author:       Jeremy Zornow
+ Author URI:   http://cottonconsultingny.com
+ Template:     specular
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  cc-specular-child
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/* Custom */
+
+html {
+  background-color:#aaa;
+}
+
+body {
+  background-color: white;
+}
+.header-border {
+  background-image:url("img/custom_photos/nav-border.png");
+  background-repeat:no-repeat;
+  background-size: 100% 5px;
+  height:5px;
+}
+
+#logo img { 
+  height: auto !important;
+  top:75%;
+}
+
+.header_page {
+  background-color: #fdfdfd !important;
+  border-bottom:2px solid #ddd;
+}
+
+.header_page .container {
+    margin-top: 1em;
+  /*background-color: #ddd;*/
+}
+
+.copyright_text {
+
+}
+
+.footer-copyright{
+  float:left;
+  font-size:2em;
+  margin-top:1em;
+}
+
+.footer-logo {
+  float:right;
+  height: 80px;
+  width: 100px;
+  background-image:url("img/custom_photos/footer-logo.png");
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+@media screen and (max-width: 700px) {
+  .footer-logo{
+    margin-top:2em;
+  }
+}
+
+
