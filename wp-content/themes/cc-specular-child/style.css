@@ -17,11 +17,24 @@
 
 html {
   background-color:#fff;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
   background-color: white;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
+
 .header-border {
   background-image:url("img/custom_photos/nav-border.png");
   background-repeat:no-repeat;
@@ -77,11 +90,17 @@ header {
   background-repeat:no-repeat;
 }
 
-@media screen and (min-width: 2200px){
-  .footer_wrapper {
-    position:fixed;
-  }  
+.viewport {
+  position:static;
 }
+
+
+.footer_wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}  
 
 @media screen and (max-width: 700px) {
   .footer-logo{
