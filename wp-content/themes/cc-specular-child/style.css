@@ -16,7 +16,7 @@
 /* Custom */
 
 html {
-  background-color:#aaa;
+  background-color:#fff;
 }
 
 body {
@@ -42,6 +42,16 @@ header {
   top:75%;
 }
 
+@media screen and (min-width:978px) and (max-width:1100px){
+  #logo {
+    width:35%;
+    margin-top:1%;
+  }
+  #logo img {
+    width:100%;
+  }
+}
+
 .header_page {
   background-color: #fdfdfd !important;
   border-bottom:2px solid #ddd;
@@ -50,10 +60,6 @@ header {
 .header_page .container {
     margin-top: 1em;
   /*background-color: #ddd;*/
-}
-
-.copyright_text {
-
 }
 
 .footer-copyright{
@@ -69,6 +75,12 @@ header {
   background-image:url("img/custom_photos/footer-logo.png");
   background-size:100%;
   background-repeat:no-repeat;
+}
+
+@media screen and (min-width: 2200px){
+  .footer_wrapper {
+    position:fixed;
+  }  
 }
 
 @media screen and (max-width: 700px) {
