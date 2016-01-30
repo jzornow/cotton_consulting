@@ -1,7 +1,7 @@
 /*
 Theme Name: Specular
 Description: Specular is a multi-purpose wordpress theme. Codeless Themes are simple and powerful. Create awesome portfolio, corporate, business, restaurant and much much more pages with this theme.
-Version: 1.4.3
+Version: 1.5.1
 Author: Codeless
 Author URI: http://www.codeless.co
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
@@ -2674,6 +2674,9 @@ footer .widget-title {
   font-size:18px;
 }
 
+.widget_twitter .with_avatar dt{width:45px; height:45px;}
+.widget_twitter .with_avatar dd{margin-left:65px;}
+
 .widget_most_popular dt{
   width:60px;
   height:60px;
@@ -4308,6 +4311,13 @@ height: 40px !important;
 /* ------------------------------------------------------------------- */
 
 /* ---------------------- Codeless Slider --------------------------------------*/
+#slider-fullwidth > .default{
+    background: #f5f5f5;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+
 .codeless_slider_swiper .loading{
   position:absolute;
   left:0;
@@ -8692,4 +8702,7 @@ width: 100%;
 .header_8 nav .menu > li > ul.sub-menu ul {
 
   left: 220px;
+}
+.vc_tta-container {
+    float: left;
 }

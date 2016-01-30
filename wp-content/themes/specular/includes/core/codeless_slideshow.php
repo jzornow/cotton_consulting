@@ -130,7 +130,7 @@ class codeless_slideshow{
                         $output .=           $this->before_render_media;
                     else
                         $output .=           $this->before_render_media[$i];
-                    $output .= 			 $image.$video;
+                    $output .= 			 $image;
     				$output .=           $this->after_render_media;
                     if(isset($slide['title']) && strlen($slide['title']) > 1){
                         $output .= $this->after_render_media; $output .= '<div class="captionss">';
@@ -285,7 +285,7 @@ class codeless_slideshow{
                                 if(!empty($slide['attachment_id'])){
                                     $image = wp_get_attachment_image_src( $slide['attachment_id'], array('3000', '3000') );
                                     
-                                    $output .= '<div class="swiper-slide" '.$ex_style.'>';
+                                    $output .= '<div class="swiper-slide">';
                                     
                                         $output .= '<a href="'.esc_url($slide['url']).'"><img src="'.esc_url($image[0]).'" alt="" /></a>';
                                         $output .= '<div class="info">';

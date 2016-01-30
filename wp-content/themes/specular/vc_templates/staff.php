@@ -3,10 +3,14 @@
  * Shortcode attributes
  * @var $atts
  * @var $staff
+ * @var $staff_position
  * @var $style
  * Shortcode class
  * @var  WPBakeryShortCode_Staff
  */
+
+global $cl_redata;
+
 $output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );

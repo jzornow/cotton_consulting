@@ -121,7 +121,9 @@
                 } else {
                     $this->post_type = get_post_type( $this->post_id );
                 }
-
+                
+                if( isset( $_GET['post_type'] ) && $_GET['post_type'] == 'product' && class_exists('Woocommerce'))
+                    $this->post_id = get_option('woocommerce_shop_page_id');
 
                 foreach ( $this->boxes as $bk => $box ) {
                     // If the post ids for this box are set, we're limiting to the current post id
@@ -1207,6 +1209,10 @@
 
                 // Check if our nonce is set.
                 if ( ! isset( $_POST['redux_metaboxes_meta_nonce'] ) || ! isset ( $_POST[ $this->parent->args['opt_name'] ] ) ) {
+                    return $post_id;
+                }
+
+                if ( isset($_POST['vc_inline']) && $_POST['vc_inline']){
                     return $post_id;
                 }
 

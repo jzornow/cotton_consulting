@@ -3159,7 +3159,8 @@ if ( ! class_exists( 'Redux' ) ) {
                             
                         ),
                         'title'    => __('Codeless Import', 'codeless-admin'),
-                        'subtitle' => __('', 'codeless-admin')
+                        'subtitle' => __('', 'codeless-admin'),
+                        'default' => 'default'
                     )
                 )
             ));

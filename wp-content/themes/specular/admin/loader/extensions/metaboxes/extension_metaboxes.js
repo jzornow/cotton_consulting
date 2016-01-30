@@ -14,11 +14,12 @@ jQuery(function($){
     "use strict";
 
     $.reduxMetaBoxes = $.reduxMetaBoxes || {};
-
+   
     $(document).ready(function () {
+
          $.reduxMetaBoxes.init();
     });
-
+    
     $.reduxMetaBoxes.init = function(){
         $.reduxMetaBoxes.notLoaded = true;
         $.reduxMetaBoxes.checkBoxVisibility();
@@ -30,9 +31,15 @@ jQuery(function($){
                 $(this).parents('.postbox:first').addClass( redux.args.class );
             }
         });
-        $('#page_template').change(function() {
-            $.reduxMetaBoxes.checkBoxVisibility('page_template');
-        });
+
+        if($('#page_template').length > 0)
+            $('#page_template').change(function() {
+                $.reduxMetaBoxes.checkBoxVisibility('page_template');
+            });
+        else{
+            $.reduxMetaBoxes.noTemplateSelect();
+        }
+            
         $('input[name="post_format"]:radio').change(function() {
             $.reduxMetaBoxes.checkBoxVisibility('post_format');
         });
@@ -44,17 +51,21 @@ jQuery(function($){
         window.onbeforeunload = null;
     });
     var testValue;
+
     $.reduxMetaBoxes.checkBoxVisibility = function(fieldID){
         if (reduxMetaboxes.length !== 0) {
             $.each(reduxMetaboxes, function(box, values) {
                 $.each(values, function(field, v) {
                     if (field === fieldID || !fieldID) {
+
                         if (field === "post_format") {
                             testValue = $("input:radio[name='post_format']:checked").val();
                         } else {
                             testValue = $('#'+field).val();
                         }
+                        
                         if (testValue) {
+
                             var visible = false;
                             $.each(v, function(key, val) {
                                 if (val === testValue) {
@@ -71,6 +82,40 @@ jQuery(function($){
                                 $.redux.initFields();
                             }
                         }
+                        
+                        
+                    }
+                });
+            });
+        }
+    };
+
+     $.reduxMetaBoxes.noTemplateSelect = function(){
+
+        if (reduxMetaboxes.length !== 0) {
+            $.each(reduxMetaboxes, function(box, values) {
+                $.each(values, function(field, v) {
+                    if (true) {
+
+                        if (field === "post_format") {
+                            testValue = $("input:radio[name='post_format']:checked").val();
+                        } else {
+                            testValue = $('#'+field).val();
+                        }
+                        
+                        if (true) {
+                            alert(box);
+                            var visible = false;
+                            
+                            if (!visible && !$.reduxMetaBoxes.notLoaded) {
+                                $('#'+box).hide();
+                            }
+                            else if (!visible) {
+                                $('#'+box).fadeOut('50');
+                            }
+                        }
+                        
+                        
                     }
                 });
             });

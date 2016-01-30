@@ -9,20 +9,18 @@
  * @var  WPBakeryShortCode_Skill
  */
 $output = '';
+global $cl_redata;
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 	
-		/*if(!isset($skill['color']))
-
+		if(!isset($color))
             $color = 'base';
-
-        */
 
         if($color == 'base'){
 
-            $color = $base;
-        }    
+            $color = $cl_redata['primary_color'];
+        }     
 
         $output .= '<h6 class="skill_title">'.esc_html($title).'</h6><span class="big_percentage">'.$percentage.'%</span>';
 

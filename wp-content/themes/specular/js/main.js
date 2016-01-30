@@ -381,41 +381,38 @@ function codelessNavigation(){
 		}
 	});
 
-	$('.header_1 nav .menu li .sub-menu').each(function(){
+	$('nav .menu li .sub-menu').each(function(){
 		$(this).parent().first().addClass('hasSubMenu');
 	});
 
-	$('.header_8 nav .menu li .sub-menu').each(function(){
-		$(this).parent().first().addClass('hasSubMenu');
-	});
 
 	$('nav .menu, .sticky_menu .menu').mouseleave(function(event) {
-		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').stop().fadeOut(400).css('display', 'none');
-		$(this).find('.codeless_custom_menu_mega_menu').stop().fadeOut(400).css('display', 'none');
+		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').fadeOut(400).css('display', 'none');
+		$(this).find('.codeless_custom_menu_mega_menu').fadeOut(400).css('display', 'none');
 	});
 
 	$('nav .menu li ul .hasSubMenu, .sticky_menu .menu li ul .hasSubMenu').mouseleave(function(event) {
-		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').stop().fadeOut(400).css('display', 'none');
-		$(this).find('.codeless_custom_menu_mega_menu').stop().fadeOut(400).css('display', 'none');
+		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').fadeOut(400).css('display', 'none');
+		$(this).find('.codeless_custom_menu_mega_menu').fadeOut(400).css('display', 'none');
 	});
 
 	$('nav .menu > li, .sticky_menu .menu > li').mouseenter(function() {
-		$(this).parent().find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').stop().fadeOut(400).css('display', 'none');
-		$('header#header .cart .content').stop().fadeOut(400).css('display', 'none');
+		$(this).parent().find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').fadeOut(400).css('display', 'none');
+		$('header#header .cart .content').fadeOut(400).css('display', 'none');
 
-		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').first().stop().fadeIn(400).css('display', 'block');
+		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').first().fadeIn(400).css('display', 'block');
 
-		$(this).parent().find('.codeless_custom_menu_mega_menu').stop().fadeOut(400).css('display', 'none');
-		$(this).find('.codeless_custom_menu_mega_menu').first().stop().fadeIn(400).css('display', 'block');
+		$(this).parent().find('.codeless_custom_menu_mega_menu').fadeOut(400).css('display', 'none');
+		$(this).find('.codeless_custom_menu_mega_menu').first().fadeIn(400).css('display', 'block');
 	});
 
 	$('nav .menu > li ul > li, .sticky_menu .menu > li ul > li').mouseenter(function() {
 		
 
-		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').first().stop().fadeIn(400).css('display', 'block');
+		$(this).find('.sub-menu').not('.codeless_custom_menu_mega_menu .sub-menu').first().fadeIn(400).css('display', 'block');
 
-		$(this).parent().find('.codeless_custom_menu_mega_menu').stop().fadeOut(400).css('display', 'none');
-		$(this).find('.codeless_custom_menu_mega_menu').first().stop().fadeIn(400).css('display', 'block');
+		$(this).parent().find('.codeless_custom_menu_mega_menu').fadeOut(400).css('display', 'none');
+		$(this).find('.codeless_custom_menu_mega_menu').first().fadeIn(400).css('display', 'block');
 	});
 
 	$('.codeless_custom_menu_mega_menu').each(function(){
@@ -520,7 +517,7 @@ function codelessSearchButton(){
 	});
 
 	
-	$(window).scroll(function() {
+	/*$(window).scroll(function() {
 		if($('body').hasClass('open_search')){
 			$('body').removeClass('open_search');
 		}
@@ -531,7 +528,7 @@ function codelessSearchButton(){
        	if((e.target.id != 's')) { 
         	$('.right_search_container').hide();
     	}
-   	});
+   	});*/
 }
 
 /*------------------------------ Side navigation --------------------------- */  
@@ -741,10 +738,13 @@ function testimonialsCarousel(){
 	"use strict";
 	$('.testimonial_carousel').each(function(){
 		var $self = $(this);
+		var c_duration = $self.data('duration');
+		if(c_duration == 'undefined')
+			c_duration = 500;
 		$(this).carouFredSel({
 						
 			auto: true,
-			scroll: { items : 1, fx: 'fade' },
+			scroll: { items : 1, fx: 'fade', duration: c_duration },
 			prev : {
 				button : $self.parent('.testimonial_carousel_element').find('.prev')
 			},
@@ -1126,13 +1126,16 @@ $.fn.codelessSliderInit = function () {
 
 	$('.codeless_slider').imagesLoaded(function(){
 		$loading.css('display', 'none');
+		var c_speed = $('.codeless_slider').data('speed');
+		if(c_speed == 'undefined')
+			c_speed = 800;
 		codelessSlider = new Swiper('.codeless_slider',{ 
 			slidesPerView: slide_per_view,
 			paginationAsRange: false,
 			loop: false,
 			touchRatio: 0.7,
 			autoplay: 5000,
-			speed: 800,
+			speed: c_speed,
 			noSwiping: true,
 			updateOnImagesReady:true,
 			onSwiperCreated: function(swiper){

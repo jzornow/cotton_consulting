@@ -110,8 +110,8 @@ class custom_walker_menu_small extends Walker {
       
 
       //set maxcolumns
-
-      if(!isset($args->max_columns)) $args->max_columns = 6;
+      if(is_object($args))
+        if(!isset($args->max_columns)) $args->max_columns = 6;
 
 
 
@@ -213,16 +213,17 @@ class custom_walker_menu_small extends Walker {
         $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';      
 
       
+        if(is_object($args)){
+          $item_output .= $args->before;
 
-        $item_output .= $args->before;
+          $item_output .= '<a'. $attributes .'>';
 
-        $item_output .= '<a'. $attributes .'>';
+          $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 
-        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+          $item_output .= '</a>';
 
-        $item_output .= '</a>';
-
-        $item_output .= $args->after;
+          $item_output .= $args->after;
+        }
 
       }
       

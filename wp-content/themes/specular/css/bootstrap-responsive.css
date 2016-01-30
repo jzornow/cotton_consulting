@@ -1465,6 +1465,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
   }
+
+  .remove_slider_onmobile .slider{display:none;}
   
 }
 

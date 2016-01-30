@@ -10,10 +10,16 @@ class CodelessSlider {
 	var $output = array();
 
 	function CodelessSlider($slider_id) {
-		$this->slider_id = $slider_id;
-		$this->createSlider();
-		$this->getAllSlides();
-		$this->closeSlider();
+		$s = get_term_by('id', $slider_id, 'slider');
+		
+		if(is_object($s)){
+			$this->slider_id = $slider_id;
+			$this->createSlider();
+			$this->getAllSlides();
+			$this->closeSlider();
+		}else{
+			$this->default_func();
+		}
 	}
 
 	function createSlider(){
@@ -27,6 +33,8 @@ class CodelessSlider {
 
 		$this->height = $height;
 
+		$speed = 800;
+
 		$extra_class = '';
 		if($cl_redata['slider_parallax']) 
 			$extra_class .= ' parallax_slider';
@@ -34,7 +42,7 @@ class CodelessSlider {
 		$output = '<div class="codeless_slider_swiper '.esc_attr($extra_class).'" style="'.(($height == 'fullscreen')?'':'height:'.$height.'px').'">';
 			$output .= '<div class="loading"><i class="moon-spinner icon-spin"></i></div>';
 			$output .= '<div class="codeless_slider_wrapper" data-start="transform: translateY(0px);" data-'.(($height == 'fullscreen')?'1440':$height).'="transform: translateY(-500px);">';
-				$output .= '<div class="codeless-slider-container swiper-parent swiper_slider codeless_slider"  data-slidenumber="1" data-height="'.esc_attr($height).'">';
+				$output .= '<div class="codeless-slider-container swiper-parent swiper_slider codeless_slider"  data-speed="'.$speed.'"  data-slidenumber="1" data-height="'.esc_attr($height).'">';
                 	$output .= '<div class="pagination-parent nav-thumbflip nav-slider">
                 					<a class="prev" href="">
 										<span class="icon-wrap"><i class="icon-angle-left"></i></span>
@@ -253,6 +261,11 @@ class CodelessSlider {
         $video_markup .= '</div>';
 
         return $video_markup;
+	}
+
+	function default_func(){
+		$output = '<div class="default">Please select a Codeless Slider before. Click Edit Page -> Slider Options (at the bottom of page options)</div>';
+		$this->output[] = $output;
 	}
 
 	function output(){

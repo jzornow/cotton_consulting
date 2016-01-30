@@ -17,10 +17,12 @@ extract( $atts );
 
         ob_start();
 
-        if($dynamic_from_where == 'all')
-          query_posts('posts_per_page = '.$posts_per_page );
+        
+        if($dynamic_from_where == 'all_cat')
+          query_posts('posts_per_page='.(int)$posts_per_page.'&paged='.get_query_var( 'paged' ) ); 
         else
-          query_posts('posts_per_page='.$posts_per_page.'&cat='.$dynamic_cat );
+          query_posts('posts_per_page='.(int)$posts_per_page.'&cat='.$dynamic_cat.'&paged='.get_query_var( 'paged' ) );
+        
         
 
         global $for_element;

@@ -76,7 +76,7 @@ class CodelessTwitter extends WP_Widget{
 
     	global $cl_redata;
 
-        $instance = wp_parse_args( (array) $instance, array( 'title' => 'Latest Tweets', 'count' => '3', 'username' => $cl_redata['twitter_username'] ) );
+        $instance = wp_parse_args( (array) $instance, array( 'title' => 'Latest Tweets', 'count' => '3' ) );
 
 		$title = 			isset($instance['title']) ? strip_tags($instance['title']): "";
 
@@ -212,7 +212,7 @@ class CodelessTwitter extends WP_Widget{
 
 				$elements = "";
 
-				$answers = array('yes','no');
+				$answers = array('no','yes');
 
 				foreach ($answers as $answer)
 
@@ -279,7 +279,7 @@ $twitter_api = new Wp_Twitter_Api( $credentials );
 // Example a - Retrieve last 5 tweets from my timeline (default type statuses/user_timeline)
 $query = 'count=5&include_entities=true&include_rts=true&screen_name='.$username;
         
-        $response = $twitter_api->query( $query, $args );
+        $response = $twitter_api->query( $query );
 
       
            if (!is_wp_error($response)) 
@@ -339,8 +339,17 @@ $query = 'count=5&include_entities=true&include_rts=true&screen_name='.$username
     	    	foreach ($tweets as $message)
 
     	    	{	
+    	    		$ex_cl = '';
+    	    		if($avatar == 'yes')
+    	    			$ex_cl = 'with_avatar';
+    	    		$output .='<li><dl class="dl-horizontal '.$ex_cl.'"><dt>';
 
-    	    		$output .='<li><dl class="dl-horizontal"><dt><i class="moon-twitter"></i></dt><dd>';
+    	    		if($avatar == 'yes')
+    	    			$output .= '<img src="'.$message['user']['image'].'" alt="avatar" />';
+    	    		else
+    	    			$output .= '<i class="moon-twitter"></i>';
+
+    	    		$output .= '</dt><dd>';
 
                 
 

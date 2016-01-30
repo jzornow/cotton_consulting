@@ -41,8 +41,9 @@ get_template_part('includes/view/page_header');
                             
                 			<?php foreach($cl_redata['portfolio_categories'] as $cat): ?>
                                 <?php $cat = get_term($cat, 'portfolio_entries'); ?>
-                        		<li class="other filter"  data-filter=".<?php echo esc_attr($cat->slug) ?>"><a href="#" class="filter" data-filter=".<?php echo esc_attr($cat->slug) ?>"><?php echo esc_html($cat->name) ?></a></li>
-                    
+                        		<?php if(is_object($cat)): ?>
+                                <li class="other filter"  data-filter=".<?php echo esc_attr($cat->slug) ?>"><a href="#" class="filter" data-filter=".<?php echo esc_attr($cat->slug) ?>"><?php echo esc_html($cat->name) ?></a></li>
+                                <?php endif; ?>
                 			<?php endforeach; ?>
                 		</ul>
             		</nav>

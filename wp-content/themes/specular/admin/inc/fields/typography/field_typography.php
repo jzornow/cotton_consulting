@@ -285,9 +285,13 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 }
 
                 $nonGStyles = array(
+                    '100' => 'More Lighter',
                     '200' => 'Lighter',
+                    '300' => 'Light',
                     '400' => 'Normal',
-                    '700' => 'Bold',
+                    '500' => 'Semi-Bold',
+                    '600' => 'Bold',
+                    '700' => 'More Bold',
                     '900' => 'Bolder'
                 );
 
@@ -949,7 +953,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             if ( ! file_exists( $gFile ) ) {
 
-                $result = wp_remote_get( apply_filters( 'redux-google-fonts-api-url', 'https://www.googleapis.com/webfonts/v1/webfonts?key=' ) . $this->parent->args['google_api_key'], array( 'sslverify' => false ) );
+                $result = @wp_remote_get( apply_filters( 'redux-google-fonts-api-url', 'https://www.googleapis.com/webfonts/v1/webfonts?key=' ) . $this->parent->args['google_api_key'], array( 'sslverify' => false ) );
 
                 if ( ! is_wp_error( $result ) && $result['response']['code'] == 200 ) {
                     $result = json_decode( $result['body'] );

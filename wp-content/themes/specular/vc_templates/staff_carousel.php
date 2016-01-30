@@ -2,12 +2,15 @@
 /**
  * Shortcode attributes
  * @var $atts
- * @var $pagination
- * @var $slide_per_view
- * @var $test_cat
+ * @var $staff
+ * @var $staff_position
+ * @var $style
  * Shortcode class
- * @var  WPBakeryShortCode_Staff_Carousel
+ * @var  WPBakeryShortCode_Staff
  */
+
+global $cl_redata;
+
 $output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );

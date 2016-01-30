@@ -4,6 +4,7 @@ global $cl_redata;
  * Shortcode attributes
  * @var $atts
  * @var $test_cat
+ * @var $duration
  * Shortcode class
  * @var  WPBakeryShortCode_Testimoniual_Carousel
  */
@@ -19,7 +20,7 @@ extract( $atts );
 
             $output .= '<div class="pagination"><a href="#" class="prev"><i class="icon-chevron-left"></i></a><a href="#" class="next"><i class="icon-chevron-right"></i></a></div>';
 
-            $output .= '<section class="row testimonial_carousel">';      
+            $output .= '<section class="row testimonial_carousel" data-duration="'.esc_attr($duration).'">';      
 
         if((int) $test_cat == 0)
             $query_post = array('posts_per_page'=> 9999, 'post_type'=> 'testimonial' );                          

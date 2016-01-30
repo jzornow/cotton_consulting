@@ -39,16 +39,6 @@ vc_remove_element("vc_single_image");
 vc_remove_element("vc_cta_button");
 vc_remove_element("vc_cta_button2");
 
-//vc_remove_element("vc_accordion");
-
-//vc_remove_element("vc_accordion_tab");
-
-vc_remove_element("vc_toggle");
-
-//vc_remove_element("vc_tabs");
-
-//vc_remove_element("vc_tab");
-
 vc_remove_element("vc_images_carousel");
 
 vc_remove_element("vc_wp_archives");
@@ -79,6 +69,40 @@ vc_remove_element("vc_wp_text");
 
 vc_remove_element("vc_pie");
 
+vc_remove_element("vc_widget_sidebar");
+vc_remove_element("vc_wp_search");
+vc_remove_element("vc_wp_meta");
+vc_remove_element("vc_wp_recentcomments");
+vc_remove_element("vc_wp_calendar");
+vc_remove_element("vc_wp_pages");
+vc_remove_element("vc_wp_tagcloud");
+vc_remove_element("vc_wp_custommenu");
+vc_remove_element("vc_wp_text");
+vc_remove_element("vc_wp_posts");
+vc_remove_element("vc_wp_links");
+vc_remove_element("vc_wp_categories");
+vc_remove_element("vc_wp_archives");
+vc_remove_element("vc_wp_rss");
+vc_remove_element("vc_teaser_grid");
+vc_remove_element("vc_button");
+vc_remove_element("vc_cta_button");
+vc_remove_element("vc_cta_button2");
+vc_remove_element("vc_message");
+vc_remove_element("vc_tour");
+vc_remove_element("vc_progress_bar");
+vc_remove_element("vc_pie");
+vc_remove_element("vc_posts_slider");
+vc_remove_element("vc_toggle");
+vc_remove_element("vc_images_carousel");
+vc_remove_element("vc_posts_grid");
+vc_remove_element("vc_carousel");
+vc_remove_element("vc_btn");
+vc_remove_element("vc_cta");
+vc_remove_element("vc_round_chart");
+vc_remove_element("vc_line_chart");
+vc_remove_element("vc_tta_accordion");
+vc_remove_element("vc_tta_tour");
+vc_remove_element("vc_tta_tabs");
 
 
 // VC_Row Mods/Additions
@@ -2839,6 +2863,20 @@ vc_map( array (
 
     ),
 
+    array (
+      "type" => "textfield",
+
+      "class" => "",
+
+      "heading" => "Duration of Item in View",
+
+      "value" => 500 ,
+
+      "param_name" => "duration",
+      
+      "description" => ""
+    )
+
   ),
 
   'category' => 'Codeless Elements',
@@ -5042,6 +5080,15 @@ class WPBakeryShortCode_Button extends WPBakeryShortCode {
 class WPBakeryShortCode_Services_Steps extends WPBakeryShortCode {
 
 }
+
+$vc_map_deprecated_settings = array (
+  'deprecated' => false,
+  'category' => __( 'Content', 'js_composer' )
+);
+vc_map_update( 'vc_accordion', $vc_map_deprecated_settings );
+vc_map_update( 'vc_tabs', $vc_map_deprecated_settings );
+vc_map_update( 'vc_tab', array('deprecated' => false) );
+vc_map_update( 'vc_accordion_tab', array('deprecated' => false) );
 
 
 ?>

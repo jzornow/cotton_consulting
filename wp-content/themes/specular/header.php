@@ -12,7 +12,18 @@
 
     <!-- Title -->
 
+    <?php
+    if ( ! function_exists( '_wp_render_title_tag' ) ) {
+        function theme_slug_render_title() {
+    ?>
     <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <?php
+        }
+        add_action( 'wp_head', 'theme_slug_render_title' );
+    }else{ ?>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <?php }
+    ?>
 
     <!-- Responsive Meta -->
     <?php if($cl_redata['responsive_bool']): ?> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <?php endif; ?>
@@ -45,6 +56,18 @@
         <?php echo $google_analytics; ?>
     </script>
     
+    <?php 
+        $custom_js = $cl_redata['custom_js'];
+        if(!empty($custom_js)):
+    ?>
+    
+    <script type="text/javascript">
+        <?php echo $custom_js ?>
+    </script>
+    
+    <?php endif; ?>
+    
+
     <?php 
 
     // Loaded all others styles and scripts.

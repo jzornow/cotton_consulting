@@ -516,7 +516,18 @@ function codeless_fullwidthheader($classes = ''){
     return $classes;
 }
 
+add_filter('body_class', 'codeless_header_remove_slider_mobile');
+function codeless_header_remove_slider_mobile($classes = ''){
+  global $cl_redata;
+  $slider_onmobile_remove = 0;
+  if((int) codeless_get_post_id() != 0)
+      $slider_onmobile_remove = redux_post_meta('cl_redata',(int) codeless_get_post_id(), 'slider_onmobile_remove');
 
+  if($slider_onmobile_remove)
+    $classes[] = 'remove_slider_onmobile';
+  return $classes;
+
+}
 
 
 /* ------------------- End Add Body Classes ----------------------------------*/
@@ -688,7 +699,7 @@ if (class_exists('WPBakeryVisualComposerAbstract')) {
     return $output;  
   }
 
-  add_shortcode_param('iconselect', 'codeless_vc_iconselect', get_template_directory_uri().'/js/jquery.fonticonpicker.min.js');  
+  vc_add_shortcode_param('iconselect', 'codeless_vc_iconselect', get_template_directory_uri().'/js/jquery.fonticonpicker.min.js');  
 
 }
 
@@ -1419,6 +1430,8 @@ function codeless_icons(){
       'icon-weibo' => 'icon-weibo',
 
       'icon-renren' => 'icon-renren',
+
+      'icon-heartbeat' => 'icon-heartbeat'
 
   );
 

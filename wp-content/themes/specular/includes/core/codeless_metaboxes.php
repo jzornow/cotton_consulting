@@ -549,6 +549,15 @@ if ( !function_exists( "cl_add_general_metaboxes" ) ):
                             ),
 
                             array(
+                                'id' => 'codeless_slider_speed',
+                                'type' => 'text',
+                                'title' => __('Codeless Slider Speed', 'codeless-admin'),
+                                'subtitle' => __('', 'codeless-admin'),
+                                'default' => '800',
+                                'required' => array('slider_type', '=', 'codeless' )
+                            ),
+
+                            array(
                                 'id' => 'codeless_slider_height',
                                 'type' => 'text',
                                 'title' => __('Slider height', 'codeless-admin'),
@@ -582,7 +591,7 @@ if ( !function_exists( "cl_add_general_metaboxes" ) ):
                                 'title' => __('Select Slider layout', 'codeless-admin'),
                                 'subtitle' => __('', 'codeless-admin'),
                                 'options' => array('boxed'=>'Boxed', 'fullwidth' => 'Fullwidth'), //Must provide key => value pairs for select options
-                                'default' =>  'boxed',
+                                'default' =>  'fullwidth',
                                 'required' => array('slider_type', '!=', 'none')
                             ),
                             array(
@@ -600,7 +609,15 @@ if ( !function_exists( "cl_add_general_metaboxes" ) ):
                                 'title' => __('Active Parallax', 'codeless-admin'),
                                 'subtitle'=> __('Look, it\'s on!', 'codeless-admin'),
                                 "default"       => 0,
-                            ),      
+                            ), 
+
+                            array(
+                                'id'=>'slider_onmobile_remove',
+                                'type' => 'switch', 
+                                'title' => __('Remove Sliders from Mobile Phone View', 'codeless-admin'),
+                                'subtitle'=> __('Check this option if you want to remove sliders from mobile view for this page.', 'codeless-admin'),
+                                "default"       => 0,
+                            ),     
             )
 
         );
