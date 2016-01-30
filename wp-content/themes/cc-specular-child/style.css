@@ -129,12 +129,23 @@ header {
   }
 
   .home-page-banner .spacer-column { display:none; }
+
+  #logo img {
+    top:78%;
+    left:5%;
+  }
 }
 
 @media screen and (max-width:480px){
   .home-page-banner .container {
     text-align:left;
     padding:15px;
+  }
+
+  #logo img {
+    max-width:80%;
+    top:62%;
+    left:10%;
   }
 
 }
