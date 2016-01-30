@@ -75,6 +75,21 @@ header {
   /*background-color: #ddd;*/
 }
 
+.home-page-banner {
+  min-height:400px;
+  background-size:cover;
+}
+
+.home-page-banner .container {
+  position:absolute;
+  bottom:40px;
+  background-color: rgba(255,255,255,0.85);
+  color:black;
+  font-weight: bold;
+  text-align:right;
+  padding:30px 80px 30px 30px;
+}
+
 .footer-copyright{
   float:left;
   font-size:2em;
@@ -102,10 +117,27 @@ header {
   left: 0;
 }  
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .footer-logo{
     margin-top:2em;
   }
+
+  .home-page-banner .container {
+    bottom:10px;
+    width:100%;
+    max-width: none;
+  }
+
+  .home-page-banner .spacer-column { display:none; }
 }
+
+@media screen and (max-width:480px){
+  .home-page-banner .container {
+    text-align:left;
+    padding:15px;
+  }
+
+}
+
 
 
