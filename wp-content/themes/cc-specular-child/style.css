@@ -134,6 +134,10 @@ header {
     top:78%;
     left:5%;
   }
+
+  .footer_wrapper {
+    position: relative;
+  }
 }
 
 @media screen and (max-width:480px){
